@@ -28,46 +28,33 @@
 
 ## Installation
 
-```bash
-$ npm install
+```txt
+$ npm i -g @nestjs/cli
+$ npm nest new .
+$ npm i --save @nestjs/config
+$ npm install --save @nestjs/swagger swagger-ui-express
+```
+## Prisma ORM
+
+```txt
+$ npm install prisma --save-dev
+$ npx prisma
+$ npx prisma init
+$ npm install @prisma/client
 ```
 
-## Running the app
+## Run Project
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```txt
+$ npm start dev
 ```
 
-## Test
+## Docker
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+```txt
+Ter instalado o Docker Desktop em seu computador.
+Criar na raiz do projeto o arquivo 'docker-compose.yml' e após configurado,
+em outro terminal (Split Terminal) 'docker-compose up' com o Docker Desktop rodando.
 ```
 
-## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
