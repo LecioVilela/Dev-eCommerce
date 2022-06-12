@@ -11,7 +11,8 @@
 ## Installation
 
 ```txt
-### Primeiramente, recomendo criar seu repositório e clonar posteriormente em seu computador, executa o Visual Studio Code diretamente pelo repo clonado. ###
+* Primeiramente, recomendo criar seu repositório e clonar posteriormente em seu computador, 
+execute o Visual Studio Code diretamente pelo repo clonado.
 
 ### Agora vamos instalar o NestJS em nosso projeto: ###
   - $ npm i -g @nestjs/cli
@@ -32,6 +33,16 @@
 ### Por último, apenas vamos adicionar o pacote de config e swagger em nossa API: ###
   - $ npm i --save @nestjs/config -> Oitava coisa
   - $ npm install --save @nestjs/swagger swagger-ui-express
+```
+
+## Nest Generate
+```txt
+ - $ nest generate <schematic> <name> [options]
+    Example
+      - $ nest generate controller
+      - $ nest generate service
+      - $ nest generate module
+More info @ https://docs.nestjs.com/cli/usages
 ```
 ## Run Project
 
