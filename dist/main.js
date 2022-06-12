@@ -10,7 +10,7 @@ async function bootstrap() {
         .setVersion('1.0')
         .build();
     const documentation = swagger_1.SwaggerModule.createDocument(app, documentationConfig);
-    swagger_1.SwaggerModule.setup('api/', app, documentation);
+    swagger_1.SwaggerModule.setup('eCommerceRest/', app, documentation);
     await app.listen(process.env.PORT || 3000);
 }
 bootstrap();

@@ -11,7 +11,7 @@ async function bootstrap() {
     .build();
 
     const documentation = SwaggerModule.createDocument(app, documentationConfig);
-    SwaggerModule.setup('api/', app, documentation);
+    SwaggerModule.setup('eCommerceRest/', app, documentation);
 
   await app.listen(process.env.PORT || 3000);
 }
