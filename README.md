@@ -16,7 +16,8 @@ execute o Visual Studio Code diretamente pelo repo clonado.
 
 ### Agora vamos instalar o NestJS em nosso projeto: ###
   - $ npm i -g @nestjs/cli
-  - $ npm nest new . 
+  - $ npm nest new .
+  - $ npm install -D typescript ts-node @types/node
 
 ### Instale o Docker Desktop em seu computador: ### 
   - $ Criar na raiz do projeto o arquivo 'docker-compose.yml' e após configurado,
@@ -42,6 +43,7 @@ execute o Visual Studio Code diretamente pelo repo clonado.
       - $ nest generate controller
       - $ nest generate service
       - $ nest generate module
+      - $ nest generate resource
 More info @ https://docs.nestjs.com/cli/usages
 ```
 ## Run Project
@@ -53,11 +55,19 @@ $ npm start dev
 ```txt
 ### Heroku ###
   - Crie uma conta na plataforma e em seguida:
-      $ npm install -g heroku
-      $ heroku --version (Para verificar a versão e se o heroku foi instalado corretamente, talvez alguns erros serão mencionados...)
-      $ heroku login (Este irá retornar o acesso ao navegador para o login e em seguida será confirmado no terminal.)
-      $ heroku git:remote -a ecommercerest
-      $ git push heroku master (Antes de executar esse comando, crie na raiz o arquivo "Procfile" e adicone uma linha com -> web: npm run start:prod, apenas isso.)
+    - $ npm install -g heroku
+    - $ heroku --version (Para verificar a versão e se o heroku foi instalado corretamente, talvez alguns erros serão mencionados...)
+    - $ heroku login (Este irá retornar o acesso ao navegador para o login e em seguida será confirmado no terminal.)
+    - $ heroku git:remote -a ecommercerest
+    - $ git push heroku master (Antes de executar esse comando, crie na raiz o arquivo "Procfile" e adicone uma linha com -> web: npm run start:prod, apenas isso.)
+```
+## Migration do arquivo "schema.prisma"
+```txt
+  - $ npm run migration:make create_NAME_table
+```
+## Enviando o seed
+```txt
+  - $ npx prisma db seed
 ```
 ## Prisma ORM
 ## Docker
