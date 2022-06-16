@@ -1,7 +1,12 @@
-import { seedCategories } from "./data/categories";
+import { PrismaClient } from '@prisma/client';
+import { seedCategories,  } from "./data/categories";
+import { seedProduct } from "./data/product";
+
+const prisma = new PrismaClient();
 
 async function main() {
     await seedCategories();
+    await seedProduct();
 }
 
 main().catch((err) => {
