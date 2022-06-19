@@ -1,4 +1,4 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { ProductsService } from './products.service';
 
 @Controller('products')
@@ -15,8 +15,17 @@ export class ProductsController {
     return this.productsService.findAll({ is_featured, q, category_id, limit });
   }
 
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.productsService.findOne(+id);
-  // }
+  @Get(':id')
+  async findOne(@Param('id') id: string) {
+    const product = await this.productsService.findOne(+id);
+    const relatedProducts = await this.productsService.findAll({
+      category_id: product.category_id,
+      limit: 4,
+    });
+
+    return {
+      ...product,
+      relatedProducts: relatedProducts,
+    };
+  }
 }

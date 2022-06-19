@@ -86,6 +86,5 @@ $ npm start dev
 ## Class Validator & Class Transformer
 
 ```txt
-  - $ npm install class-validator --save
-  - $ npm install class-transformer --save
+  - $ npm install class-validator class-transformer --save
 ```
