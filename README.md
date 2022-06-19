@@ -4,6 +4,7 @@
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
@@ -11,7 +12,7 @@
 ## Installation
 
 ```txt
-* Primeiramente, recomendo criar seu repositório e clonar posteriormente em seu computador, 
+* Primeiramente, recomendo criar seu repositório e clonar posteriormente em seu computador,
 execute o Visual Studio Code diretamente pelo repo clonado.
 
 ### Agora vamos instalar o NestJS em nosso projeto: ###
@@ -19,11 +20,11 @@ execute o Visual Studio Code diretamente pelo repo clonado.
   - $ npm nest new .
   - $ npm install -D typescript ts-node @types/node
 
-### Instale o Docker Desktop em seu computador: ### 
+### Instale o Docker Desktop em seu computador: ###
   - $ Criar na raiz do projeto o arquivo 'docker-compose.yml' e após configurado,
     em outro terminal (Split Terminal) 'docker-compose up' com o Docker Desktop rodando.
 
-### Utilizaremos o Prisma como nosso ORM: ### 
+### Utilizaremos o Prisma como nosso ORM: ###
   - $ npm install prisma --save-dev
   - $ npx prisma
   - $ npx prisma init
@@ -37,6 +38,7 @@ execute o Visual Studio Code diretamente pelo repo clonado.
 ```
 
 ## Nest Generate
+
 ```txt
  - $ nest generate <schematic> <name> [options]
     Example
@@ -46,12 +48,15 @@ execute o Visual Studio Code diretamente pelo repo clonado.
       - $ nest generate resource
 More info @ https://docs.nestjs.com/cli/usages
 ```
+
 ## Run Project
 
 ```txt
 $ npm start dev
 ```
+
 ## Deploy no Heroku
+
 ```txt
 ### Heroku ###
   - Crie uma conta na plataforma e em seguida:
@@ -61,16 +66,26 @@ $ npm start dev
     - $ heroku git:remote -a ecommercerest
     - $ git push heroku master (Antes de executar esse comando, crie na raiz o arquivo "Procfile" e adicone uma linha com -> web: npm run start:prod, apenas isso.)
 ```
+
 ## Migration do arquivo "schema.prisma"
+
 ```txt
   - $ npm run migration:make create_NAME_table
 ```
+
 ## Enviando o seed
+
 ```txt
   - $ npx prisma db seed
 ```
+
 ## Prisma ORM
+
 ## Docker
 
+## Class Validator & Class Transformer
 
-
+```txt
+  - $ npm install class-validator --save
+  - $ npm install class-transformer --save
+```
