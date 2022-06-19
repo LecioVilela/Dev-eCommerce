@@ -1,15 +1,18 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { CreateProductDto } from './dto/create-product.dto';
-import { UpdateProductDto } from './dto/update-product.dto';
 
 @Controller('products')
 export class ProductsController {
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private readonly productsService: ProductsService) { }
 
   @Get()
-  findAll() {
-    return this.productsService.findAll();
+  findAll(
+    @Query('is_featured') is_featured: string,
+    @Query('q') q: string,
+    @Query('category_id') category_id: number,
+    @Query('limit') limit: number,
+  ) {
+    return this.productsService.findAll({ is_featured, q, category_id, limit });
   }
 
   // @Get(':id')
