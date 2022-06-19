@@ -70,7 +70,7 @@ $ npm start dev
 ## Migration do arquivo "schema.prisma"
 
 ```txt
-  - $ npm run migration:make create_NAME_table
+  - $ npx prisma migrate dev
 ```
 
 ## Enviando o seed
